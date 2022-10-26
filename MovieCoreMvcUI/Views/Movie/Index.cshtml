@@ -1,0 +1,107 @@
+﻿@model IEnumerable<MovieEntity.Models.Movie>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@*h1>Index</h1>*@
+
+@*<div class="container-fluid" style="height:100px;background-color:gold">
+    <h1> Movie List </h1>
+</div>*@
+
+@*<div class="row">
+    <div class="col-md-4" style="height:100px">
+        <div class="alert alert-success">Movie 1</div>
+    </div>    
+    <div class="col-md-4" style="height:100px">
+        <div class="card">
+            <div class="card-header">Movie Title</div>
+            <div class="card-body">Movie Body</div>
+            <div class="card-footer">
+                <button class="btn-primary">More....</button>          
+            </div>
+         </div>
+     </div>
+    <div class="col-md-4" style="height:100px;background-color:red">Movie 3</div>
+</div>*@
+<div class="container-fluid" style="background-color:aqua">
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="\img\img4.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Brad Peyton</h5>
+                    <p class="card-text">Primatologist Davis Okoye shares an unshakable bond with George, the extraordinarily intelligent, silverback gorilla who has been in his care since birth.</p>
+                    <a href="#" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="\img\img5.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Stuck (2017)</h5>
+                    <p class="card-text">While we haven’t really looked at musicals in the past here on Geeky Hobbies, I have always been a big fan of the genre. It is hard to explain why I like musicals but there is just something about them that are so enjoyable.</p>
+                    <a href="#" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="\img\img6.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Joker phoenix</h5>
+                    <p class="card-text">Joker is a 2019 American psychological thriller film directed and produced by Todd Phillips, who co-wrote the screenplay with Scott Silver.</p>
+                    <a href="#" class="btn btn-primary">Explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+<div>
+    <hr />
+    <a asp-controller="Movie" asp-action="MovieEntry">Movie Entry</a>
+    <hr />
+</div>
+<div class="row">
+    <div class="col-12">
+        <h3>Movies</h3>
+        <hr />
+        <table class="table table-light table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>MovieDesc</th>
+                    <th>MovieType</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var movie in Model){
+                    <tr>
+                        <td>@movie.Id</td>
+                        <td>@movie.Name</td>
+                        <td>@movie.MovieDesc</td>
+                        <td>@movie.MovieType</td>
+                        <td>
+                            <a asp-controller="Movie" asp-action="EditMovie" asp-route-Id="@movie.Id">Edit</a>
+                        </td>
+                        <td>
+                            <a asp-controller="Movie" asp-action="DeleteMovie" asp-route-Id="@movie.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+

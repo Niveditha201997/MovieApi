@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MovieEntity.Models.Booking>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@*<h1>Index</h1>*@
+
+<div>
+    <hr />
+    <a asp-controller="Booking" asp-action="BookingEntry">Booking Entry</a>
+    <hr />
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <h3>Booking</h3>
+        <hr />
+        <table class="table table-light table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>MovieId</th>
+                    <th>MovieName</th>
+                    <th>TheatreName</th>
+                    <th>seatNo</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var bookings in Model)
+                {
+                    <tr>
+                        <td>@bookings.Id</td>
+                        <td>@bookings.MovieId</td>
+                        <td>@bookings.MovieName</td>
+                        <td>@bookings.TheatreName</td>
+                        <td>@bookings.seatNo</td>
+                        <td>@bookings.Address</td>
+                        <td>
+                            <a asp-controller="Booking" asp-action="EditBooking" asp-route-Id="@bookings.Id">Edit</a>
+                        </td>
+                        <td>
+                            <a asp-controller="Booking" asp-action="DeleteBooking" asp-route-Id="@bookings.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

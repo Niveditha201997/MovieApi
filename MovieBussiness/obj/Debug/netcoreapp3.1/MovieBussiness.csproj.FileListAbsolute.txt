@@ -1,0 +1,15 @@
+C:\MovieProject\MoviePresentation\MovieBussiness\bin\Debug\netcoreapp3.1\MovieBussiness.deps.json
+C:\MovieProject\MoviePresentation\MovieBussiness\bin\Debug\netcoreapp3.1\MovieBussiness.dll
+C:\MovieProject\MoviePresentation\MovieBussiness\bin\Debug\netcoreapp3.1\MovieBussiness.pdb
+C:\MovieProject\MoviePresentation\MovieBussiness\bin\Debug\netcoreapp3.1\MovieData.dll
+C:\MovieProject\MoviePresentation\MovieBussiness\bin\Debug\netcoreapp3.1\MovieEntity.dll
+C:\MovieProject\MoviePresentation\MovieBussiness\bin\Debug\netcoreapp3.1\MovieData.pdb
+C:\MovieProject\MoviePresentation\MovieBussiness\bin\Debug\netcoreapp3.1\MovieEntity.pdb
+C:\MovieProject\MoviePresentation\MovieBussiness\obj\Debug\netcoreapp3.1\MovieBussiness.csproj.AssemblyReference.cache
+C:\MovieProject\MoviePresentation\MovieBussiness\obj\Debug\netcoreapp3.1\MovieBussiness.GeneratedMSBuildEditorConfig.editorconfig
+C:\MovieProject\MoviePresentation\MovieBussiness\obj\Debug\netcoreapp3.1\MovieBussiness.AssemblyInfoInputs.cache
+C:\MovieProject\MoviePresentation\MovieBussiness\obj\Debug\netcoreapp3.1\MovieBussiness.AssemblyInfo.cs
+C:\MovieProject\MoviePresentation\MovieBussiness\obj\Debug\netcoreapp3.1\MovieBussiness.csproj.CoreCompileInputs.cache
+C:\MovieProject\MoviePresentation\MovieBussiness\obj\Debug\netcoreapp3.1\MovieBussiness.csproj.CopyComplete
+C:\MovieProject\MoviePresentation\MovieBussiness\obj\Debug\netcoreapp3.1\MovieBussiness.dll
+C:\MovieProject\MoviePresentation\MovieBussiness\obj\Debug\netcoreapp3.1\MovieBussiness.pdb

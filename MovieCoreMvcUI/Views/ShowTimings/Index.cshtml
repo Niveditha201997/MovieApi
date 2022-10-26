@@ -1,0 +1,51 @@
+﻿@model IEnumerable<MovieEntity.Models.ShowTimings>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@*<h1>Index</h1>*@
+
+<div>
+    <hr />
+    <a asp-controller="ShowTimings" asp-action="ShowTimingsEntry">ShowTimings Entry</a>
+    <hr />
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <h3>ShowTimings</h3>
+        <hr />
+        <table class="table table-light table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>MovieId</th>
+                    <th>TheatreId</th>
+                    <th>ShowTime</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var showTimings in Model)
+                {
+                    <tr>
+                        <td>@showTimings.Id</td>
+                        <td>@showTimings.MovieId</td>
+                        <td>@showTimings.TheatreId </td>
+                        <td>@showTimings.ShowTime</td>
+                        <td>
+                            <a asp-controller="ShowTimings" asp-action="EditShowTimings" asp-route-Id="@showTimings.Id">Edit</a>
+                        </td>
+                        <td>
+                            <a asp-controller="ShowTimings" asp-action="DeleteShowTimings" asp-route-Id="@showTimings.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+﻿@model MovieEntity.Models.ShowTimings
+
+@{
+    ViewData["Title"] = "DeleteShowTimings";
+}
+
+@*<h1>DeleteShowTimings</h1>*@
+
+<div>
+    <hr />
+    <a asp-controller="ShowTimings" asp-action="Index">ShowTimings Entry</a>
+    <hr />
+</div>
+
+<form method="post" enctype="multipart/form-data">
+    <h2>ShowTimings Entry</h2>
+    <div class="form-group">
+        <label> ShowTimings Id </label>
+        <input type="text" asp-for="Id" class="form-control" placeholder="enter showTimings Id" required />
+    </div>
+
+    <input type="submit" value="Save" class="btn btn-outline-success" />
+    <input type="button" value="Reset" class="btn btn-outline-secondary" />
+    <hr />
+    @if (ViewBag.status == "Ok")
+    {
+        <div class="alert alert-success">
+            @ViewBag.message
+        </div>
+    }
+    else if (ViewBag.status == "Error")
+    {
+        <div class="alert alert-danger">
+            @ViewBag.message
+        </div>
+    }
+</form>
+

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MovieEntity.Models.Theatre>
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@*<h1>Index</h1>*@
+
+<div>
+    <hr />
+    <a asp-controller="Theatre" asp-action="TheatreEntry">Theatre Entry</a>
+    <hr />
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <h3>Theatre</h3>
+        <hr />
+        <table class="table table-light table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Comments</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var theatre in Model)
+                {
+                    <tr>
+                        <td>@theatre.Id</td>
+                        <td>@theatre.Name</td>
+                        <td>@theatre.Address</td>
+                        <td>@theatre.Comments</td>
+                        <td>
+                            <a asp-controller="Theatre" asp-action="EditTheatre" asp-route-Id="@theatre.Id">Edit</a>
+                        </td>
+                        <td>
+                            <a asp-controller="Theatre" asp-action="DeleteTheatre" asp-route-Id="@theatre.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
